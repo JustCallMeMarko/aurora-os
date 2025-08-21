@@ -29,7 +29,7 @@ export default function Toast(props: ToastProps) {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.3, delay: 0.5 }}
-                    className="mx-auto mt-4 px-2 py-3 bg-black/40 backdrop-blur-sm border h-fit border-white/30 z-55 rounded-md flex items-center justify-center"
+                    className="mx-auto mt-8 py-3 bg-black backdrop-blur-sm  h-fit z-55 rounded-full px-8 flex items-center justify-center"
                 >
                     <CheckIcon className="w-6 h-6 text-white mr-2" />
                     <span className="text-white font-semibold text-sm">{props.message}</span>

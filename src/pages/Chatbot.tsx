@@ -25,7 +25,7 @@ function Chatbot() {
   return (
     <div className="overflow-y-hidden w-[50%] max-h-[590px] h-[90%] bg-black/40 border-1 p-4 relative border-white/30 rounded-xl mx-auto backdrop-blur-md ">
       <div className="flex items-center gap-4">
-        <img src={AthenaColored} alt="Athena Colored" />
+        <img src={AthenaColored} alt="Athena Colored" className="w-[54px] h-[74px]"/>
         <p className="text-white font-bold italic text-3xl">Athena AI</p>
       </div>
       <div className="h-[78%] overflow-y-auto flex flex-col w-full">
