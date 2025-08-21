@@ -71,7 +71,7 @@ function Taskbar({
         </ul>
         <div className="flex items-center justify-center bg-stone-700/50 backdrop-blur-md border-white/20 border-1 rounded-full px-0.5">
             <input type="text" name="search" id="search" className="pl-2 w-[100px] outline-0 text-white"/>
-            <MagnifyingGlassCircleIcon className="size-8 text-white opacity-40" />
+            <MagnifyingGlassCircleIcon className="size-8 text-white opacity-40 cursor-pointer" />
         </div>
     </div>
   )
