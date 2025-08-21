@@ -3,11 +3,13 @@ import backgroundLogin from "../assets/backgroundLogin.png";
 import WifiBatt from "../assets/WifiBatt.png";
 import { Outlet } from "react-router-dom";
 import Taskbar from "../components/Taskbar";
+import Toast from "../components/Toast";
 
 function Layout() {
   const [timeFormat, setTimeFormat] = useState("");
-  
-    useEffect(() => {
+  const [showToast, setShowToast] = useState(false);
+  const [msg, setMsg] = useState("");
+  useEffect(() => {
       const interval = setInterval(() => {
         const newTime = new Date().toLocaleTimeString();
         const [hours, minutes] = newTime.split(":");
@@ -35,7 +37,13 @@ function Layout() {
         <div className="w-screen h-screen">
             <Outlet />
         </div>
-        <Taskbar/>
+        <Taskbar setMess={setMsg} setToast={setShowToast} />
+        <Toast
+          message={msg}
+          duration={4000}
+          activate={showToast}
+          deactivate={setShowToast}
+        />
     </div>
   )
 }

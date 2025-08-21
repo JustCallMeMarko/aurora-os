@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Layout from "./layout/Layout";
 import Chatbot from "./pages/Chatbot";
 import Spotify from "./pages/Spotify";
+import VR from "./pages/VR";  
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/ai" element={<Chatbot />} />
           <Route path="/spotify" element={<Spotify />} />
+          <Route path="/vr" element={<VR />} />
         </Route>
       </Routes>
     </BrowserRouter>
