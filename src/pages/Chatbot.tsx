@@ -23,24 +23,24 @@ function Chatbot() {
   };
 
   return (
-    <div className="overflow-y-hidden w-[50%] max-h-[590px] h-[90%] bg-black/40 border-1 p-4 relative border-white/30 rounded-xl mx-auto backdrop-blur-md ">
+    <div className="overflow-y-hidden w-[90%] md:w-[50%] max-h-[590px] h-[80%] md:h-[90%] bg-black/40 border-1 p-4 relative border-white/30 rounded-xl mx-auto backdrop-blur-md ">
       <div className="flex items-center gap-4">
-        <img src={AthenaColored} alt="Athena Colored" className="w-[54px] h-[74px]"/>
-        <p className="text-white font-bold italic text-3xl">Athena AI</p>
+        <img src={AthenaColored} alt="Athena Colored" className="w-[25px] md:w-[54px] h-[25px] md:h-[74px]"/>
+        <p className="text-white font-bold italic text-lg md:text-3xl">Athena AI</p>
       </div>
       <div className="h-[78%] overflow-y-auto flex flex-col w-full">
         {messages.map((msg: myMsg, index: number) =>
           msg.user === "bot" ? (
             <div
               key={index}
-              className="my-2 p-2 rounded-md bg-stone-500/50 max-w-[60%] text-white self-start"
+              className="my-2 p-2 rounded-md bg-stone-500/50 max-w-[60%] text-white text-xs md:text-md self-start"
             >
               <span>{msg.message}</span>
             </div>
           ) : (
             <div
               key={index}
-              className="my-2 p-2 rounded-md bg-green-500/50 max-w-[60%] text-white self-end text-right"
+              className="my-2 p-2 rounded-md bg-green-500/50 max-w-[60%] text-white text-xs md:text-md self-end text-right"
             >
               <span>{msg.message}</span>
             </div>
@@ -64,11 +64,11 @@ function Chatbot() {
               onChange={(e) => {
                 setInput(e.target.value);
               }}
-              className="bg-stone-700/50 border-1 text-white outline-0 border-white/30 rounded-full w-[86%] placeholder:text-white/30 px-6 py-2"
+              className="bg-stone-700/50 border-1 text-white outline-0 border-white/30 rounded-full w-[68%] md:w-[86%] placeholder:text-white/30 px-6 py-2"
               placeholder="Enter your message here"
             />
             <button
-              className="p-2 bg-white rounded-full w-[6%] cursor-pointer"
+              className="p-2 bg-white rounded-full w-[13%] md:w-[6%] cursor-pointer"
               type="submit"
             >
               <svg

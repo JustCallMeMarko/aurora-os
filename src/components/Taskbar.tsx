@@ -14,42 +14,42 @@ function Taskbar({
   setMess: (value: string) => void;
 }) {
   return (
-    <div className="fixed z-50 bottom-4 bg-stone-700/50 border-1 w-fit gap-16 border-white/30 rounded-full flex px-2 py-2">
+    <div className="fixed z-50 bottom-4 bg-stone-700/50 border-1 w-fit gap-2 md:gap-16 border-white/30 rounded-full flex px-2 py-2">
         <ul className="flex gap-2 items-center">
             <motion.li
             initial={{ y: 0 }}
             whileHover={{ y: -4 }}
             transition={{type: "spring", stiffness: 400, damping: 15, duration: 0.2}}
             className="cursor-pointer">
-                <Link to="/home"><img src={aurora} alt="some image" className="h-8 opacity-40" /></Link>
+                <Link to="/home"><img src={aurora} alt="some image" className="h-8 w-8 opacity-40" /></Link>
             </motion.li>
             <motion.li
             initial={{ y: 0 }}
             whileHover={{ y: -4 }}
             transition={{type: "spring", stiffness: 400, damping: 15, duration: 0.2}}
             className="cursor-pointer">
-                <Link to="/ai"><img src={Athena} alt="some image" className="h-8 opacity-40 mt-1.5" /></Link>
+                <Link to="/ai"><img src={Athena} alt="some image" className="h-8 w-7 opacity-40 mt-1.5" /></Link>
             </motion.li>
             <motion.li
             initial={{ y: 0 }}
             whileHover={{ y: -4 }}
             transition={{type: "spring", stiffness: 400, damping: 15, duration: 0.2}}
             className="cursor-pointer">
-                <Link to="/vr"><img src={VR} alt="some image" className="h-7 opacity-40 mt-1" /></Link>
+                <Link to="/vr"><img src={VR} alt="some image" className="h-7 w-8 opacity-40 mt-1" /></Link>
             </motion.li>
             <motion.li
             initial={{ y: 0 }}
             whileHover={{ y: -4 }}
             transition={{type: "spring", stiffness: 400, damping: 15, duration: 0.2}}
             className="cursor-pointer">
-                <Link to="/home"><img src={google} alt="some image" className="h-7 opacity-40" /></Link>
+                <Link to="/home"><img src={google} alt="some image" className="h-7 w-7 opacity-40" /></Link>
             </motion.li>
             <motion.li
             initial={{ y: 0 }}
             whileHover={{ y: -4 }}
             transition={{type: "spring", stiffness: 400, damping: 15, duration: 0.2}}
             className="cursor-pointer">
-                <Link to="/spotify"><img src={Spotify} alt="some image" className="h-7 opacity-40" /></Link>
+                <Link to="/spotify"><img src={Spotify} alt="some image" className="h-7 w-7 opacity-40" /></Link>
             </motion.li>
             <motion.li
             initial={{ y: 0 }}

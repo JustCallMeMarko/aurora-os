@@ -31,13 +31,13 @@ function Login() {
         backgroundPosition: "center",
       }}
     >
-      <p className="text-[100px] font-time text-white/80 h-[150px] font-extrabold">
+      <p className="text-7xl md:text-[100px] font-time text-white/80 h-[150px] font-extrabold">
         {timeFormat}
       </p>
       <img
         src={auroraOs}
         alt="Placeholder"
-        className="opacity-30 w-50 h-45 -ml-6"
+        className="opacity-30 w-30 md:w-50 h-25 md:h-45 -ml-6"
       />
       <div className="flex flex-col items-center justify-center mt-10 gap-2">
         <input
@@ -45,7 +45,7 @@ function Login() {
           name="password"
           value={password}
           placeholder="Enter password"
-          className="bg-white/70 rounded-full px-3 py-1 w-[200px] text-white/80 placeholder:text-black/30"
+          className="bg-white/70 rounded-full px-3 py-1 w-[180px] md:w-[200px] text-sm md:text-md text-white/80 placeholder:text-black/30"
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               if (e.currentTarget.value === "marksakalam") {
