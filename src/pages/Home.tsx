@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import auroraOs from "../assets/auroraOS.png";
 import backgroundLogin from "../assets/backgroundLogin.png";
+import FaceUnlock from "../components/FaceUnlock";
 
 function Home() {
   const [timeFormat, setTimeFormat] = useState("");
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,11 +45,11 @@ function Home() {
           placeholder="Enter password"
           className="bg-white/70 rounded-full px-3 py-1 w-[200px] text-white/80 placeholder:text-black/30"
         />
-        <div className="flex justify-between w-[200px]">
-          <button className="font-bold text-white/70 text-sm">Reset</button>
-          <button className="font-bold text-white/70 text-sm">More</button>
+        <div className="flex justify-center w-[200px]">
+          <button className="font-bold text-white/70 text-sm" onClick={() => setOpen(true)}>More</button>
         </div>
       </div>
+      <FaceUnlock open={open} setOpen={setOpen}/>
     </div>
   );
 }
