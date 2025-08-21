@@ -59,7 +59,7 @@ function Login() {
         />
         <div className="flex justify-center w-[200px]">
           <button
-            className="font-bold text-white/70 text-sm"
+            className="font-bold text-white/70 cursor-pointer text-sm"
             onClick={() => setOpen(true)}
           >
             More
