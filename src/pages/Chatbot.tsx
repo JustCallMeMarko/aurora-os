@@ -52,12 +52,10 @@ function Chatbot() {
             className="w-[91%] flex gap-2 items-center justify-center"
             onSubmit={handleSendMessage}
           >
-            <button
-              type="button"
-              className="w-[5%] size-5 text-2xl border-white border-2 cursor-pointer text-white rounded-full flex justify-center items-center p-5"
-            >
-              +
-            </button>
+            <div className="flex justify-center items-center w-[5%] size-5 text-2xl border-white border-2 cursor-pointer text-white rounded-full p-5">
+<p className="text-lg mb-0.5">+</p>
+            </div>
+          
             <input
               type="text"
               value={input}
@@ -68,7 +66,7 @@ function Chatbot() {
               placeholder="Enter your message here"
             />
             <button
-              className="p-2 bg-white rounded-full w-[13%] md:w-[6%] cursor-pointer"
+              className="p-2 bg-white flex justify-center items-center rounded-full w-[13%] md:w-[6%] cursor-pointer"
               type="submit"
             >
               <svg
