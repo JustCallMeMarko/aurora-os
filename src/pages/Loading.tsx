@@ -1,21 +1,12 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import loading from "../assets/loading.mp4";
 
 function Loading() {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("/login");
-    }, 10000);
-
-    return () => clearTimeout(timer);
-  }, [navigate]);
-
   return (
-    <div className="flex justify-center items-center w-screen h-screen">
-      <video src={loading} autoPlay loop muted playsInline className="block object-cover w-full md:w-[40%] h-[40%]" />
+    <div className="flex justify-center items-center w-screen h-screen" onClick={() => navigate("/login")}>
+      <video src={loading} autoPlay muted playsInline className="block object-cover w-full md:w-[40%] h-[40%]" onClick={() => navigate("/login")}/>
     </div>
   );
 }
