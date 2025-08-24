@@ -4,9 +4,7 @@ interface myMsg {
   user: "bot" | "user";
   message: string;
 }
-{
-  /* <img src={AthenaColored} alt="Athena Colored" /> */
-}
+
 function Chatbot() {
   const [messages, setMessages] = useState<myMsg[]>([
     {
@@ -33,14 +31,14 @@ function Chatbot() {
           msg.user === "bot" ? (
             <div
               key={index}
-              className="my-2 p-2 rounded-md bg-stone-500/50 max-w-[60%] text-white text-xs md:text-md self-start"
+              className="my-2 p-2 rounded-md bg-stone-500/50 max-w-[60%] text-white text-md self-start"
             >
               <span>{msg.message}</span>
             </div>
           ) : (
             <div
               key={index}
-              className="my-2 p-2 rounded-md bg-green-500/50 max-w-[60%] text-white text-xs md:text-md self-end text-right"
+              className="my-2 p-2 rounded-md bg-green-500/50 max-w-[60%] text-white text-md self-end text-right"
             >
               <span>{msg.message}</span>
             </div>

@@ -5,12 +5,14 @@ import Layout from "./layout/Layout";
 import Chatbot from "./pages/Chatbot";
 import Spotify from "./pages/Spotify";
 import VR from "./pages/VR";  
+import Loading from "./pages/Loading";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Loading />} />
+        <Route path="/login" element={<Login />} />
         <Route element={<Layout />}>
           <Route path="/home" element={<Home />} />
           <Route path="/ai" element={<Chatbot />} />

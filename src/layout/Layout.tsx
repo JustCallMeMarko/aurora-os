@@ -40,7 +40,7 @@ function Layout() {
         <Taskbar setMess={setMsg} setToast={setShowToast} />
         <Toast
           message={msg}
-          duration={4000}
+          duration={1000}
           activate={showToast}
           deactivate={setShowToast}
         />
