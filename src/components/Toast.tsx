@@ -1,4 +1,3 @@
-import { CheckIcon } from "@heroicons/react/16/solid";
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
