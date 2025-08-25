@@ -7,7 +7,7 @@ function VR() {
   return (
     <>
       <Home />
-      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-stone-700/50 border-1 items-center justify-center w-[90%] border-white/30 py-10 md:py-20 rounded-xl md:w-[46%] h-[74%] mx-auto backdrop-blur-md gap-4 md:gap-8 flex flex-col">
+      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-stone-700/50 border-1 items-center justify-center w-[90%] border-white/30 py-4 mt-8 md:mt-0 md:py-20 rounded-xl md:w-[46%] h-fit md:h-[74%] mx-auto backdrop-blur-md gap-4 md:gap-8 flex flex-col">
         <Link
           to="/home"
           className="absolute top-4 right-4 bg-stone-700/50 border-1 border-white/30 rounded-md p-1 hover:scale-110 transition-transform duration-200"

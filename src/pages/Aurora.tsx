@@ -9,7 +9,7 @@ function Setting() {
   return (
     <>
     <Home />
-    <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black/50 border-1 border-white/30 rounded-xl w-[46%] h-[77%] flex flex-col mx-auto self-end mb-12">
+    <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black/50 border-1 border-white/30 rounded-xl w-[90%] md:w-[46%] h-[77%] flex flex-col mx-auto self-end mb-12 backdrop-blur-sm">
       <div className="w-[90%] mx-auto mt-5 flex items-center gap-2 bg-black/30 rounded-full px-0.5 py-0.5 border-1 border-white/30">
         <MagnifyingGlassCircleIcon className="size-8 text-white/50 hover:text-white transition-colors cursor-pointer" />
         <input

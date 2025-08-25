@@ -11,20 +11,21 @@ import Chrome from "./pages/Chrome";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Loading />} />
-        <Route path="/login" element={<Login />} />
-        <Route element={<Layout />}>
-          <Route path="/home" element={<Home />} />
-          <Route path="/chrome" element={<Chrome />} />
-          <Route path="/aurora" element={<Aurora />} />
-          <Route path="/ai" element={<Chatbot />} />
-          <Route path="/spotify" element={<Spotify />} />
-          <Route path="/vr" element={<VR />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Loading />} />
+          <Route path="/login" element={<Login />} />
+          <Route element={<Layout />}>
+            <Route path="/home" element={<Home />} />
+            <Route path="/chrome" element={<Chrome />} />
+            <Route path="/aurora" element={<Aurora />} />
+            <Route path="/ai" element={<Chatbot />} />
+            <Route path="/spotify" element={<Spotify />} />
+            <Route path="/vr" element={<VR />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
   );
 }
 

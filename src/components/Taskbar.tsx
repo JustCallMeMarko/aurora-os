@@ -26,7 +26,7 @@ function Taskbar({
         }
     }
   return (
-    <div className="fixed z-50 bottom-4 bg-stone-700/50 border-1 w-fit gap-2 md:gap-16 border-white/30 rounded-full flex px-2 py-2">
+    <div className="fixed backdrop-blur-sm z-50 bottom-4 bg-stone-700/50 border-1 w-fit gap-2 md:gap-16 border-white/30 rounded-full flex px-2 py-2">
         <ul className="flex gap-2 items-center">
             <motion.li
             initial={{ y: 0 }}
