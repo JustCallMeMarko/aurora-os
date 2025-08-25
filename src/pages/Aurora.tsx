@@ -46,10 +46,6 @@ function Setting() {
             <div className="bg-black/30 border-1 text-xs border-white/20 rounded-lg p-2 text-white hover:scale-110 transition-all duration-100 cursor-pointer h-[70px]">App Icon</div>
             <div className="bg-black/30 border-1 text-xs border-white/20 rounded-lg p-2 text-white hover:scale-110 transition-all duration-100 cursor-pointer h-[70px]">App Icon</div>
             <div className="bg-black/30 border-1 text-xs border-white/20 rounded-lg p-2 text-white hover:scale-110 transition-all duration-100 cursor-pointer h-[70px]">App Icon</div>
-            <div className="bg-black/30 border-1 text-xs border-white/20 rounded-lg p-2 text-white hover:scale-110 transition-all duration-100 cursor-pointer h-[70px]">App Icon</div>
-            <div className="bg-black/30 border-1 text-xs border-white/20 rounded-lg p-2 text-white hover:scale-110 transition-all duration-100 cursor-pointer h-[70px]">App Icon</div>
-            <div className="bg-black/30 border-1 text-xs border-white/20 rounded-lg p-2 text-white hover:scale-110 transition-all duration-100 cursor-pointer h-[70px]">App Icon</div>
-            <div className="bg-black/30 border-1 text-xs border-white/20 rounded-lg p-2 text-white hover:scale-110 transition-all duration-100 cursor-pointer h-[70px]">App Icon</div>
           </div>
         </div>
         <div className="w-[42%] self-center">

@@ -9,6 +9,8 @@ function Layout() {
   const [timeFormat, setTimeFormat] = useState("");
   const [showToast, setShowToast] = useState(false);
   const [msg, setMsg] = useState("");
+  const [lockIn, setLockIn] = useState(false);
+  const [encrypt, setEncrypt] = useState(false);
   useEffect(() => {
       const interval = setInterval(() => {
         const newTime = new Date().toLocaleTimeString();
@@ -35,9 +37,9 @@ function Layout() {
           <span className="text-white font-bold text-xs">{timeFormat}</span>
         </div>
         <div className="w-screen h-screen flex">
-            <Outlet />
+            <Outlet context={{ lockIn, setLockIn, encrypt, setEncrypt }} />
         </div>
-        <Taskbar setMess={setMsg} setToast={setShowToast} />
+        <Taskbar setMess={setMsg} setToast={setShowToast} setLockIn={setLockIn} lockIn={lockIn} encrypt={encrypt} setEncrypt={setEncrypt} />
         <Toast
           message={msg}
           duration={1000}

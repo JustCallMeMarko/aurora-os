@@ -10,9 +10,17 @@ import { useState } from "react";
 function Taskbar({
   setToast,
   setMess,
+  setLockIn,
+  lockIn,
+  encrypt,
+  setEncrypt
 }: {
   setToast: (value: boolean) => void;
   setMess: (value: string) => void;
+  setLockIn: (value: boolean) => void;
+  lockIn: boolean;
+  encrypt: boolean;
+  setEncrypt: (value: boolean) => void;
 }) {
     const navigate = useNavigate();
     const [selected, setSelected] = useState("");
@@ -73,7 +81,7 @@ function Taskbar({
             whileHover={{ y: -4 }}
             transition={{type: "spring", stiffness: 400, damping: 15, duration: 0.2}}
             className="cursor-pointer"
-            onClick={() => {setToast(true); setMess("Lock In Mode")}}>
+            onClick={() => {setToast(true); setLockIn(!lockIn); setMess(lockIn ? "Lock In Mode: Disabled" : "Lock In Mode: Enabled")}}>
                 <BoltIcon className="size-6 text-white opacity-40 hover:opacity-100" />
             </motion.li>
             <motion.li
@@ -81,7 +89,7 @@ function Taskbar({
             whileHover={{ y: -4 }}
             transition={{type: "spring", stiffness: 400, damping: 15, duration: 0.2}}
             className="cursor-pointer"
-            onClick={() => {setToast(true); setMess("Encryption Mode")}}>
+            onClick={() => {setToast(true); setMess(encrypt ? "Encryption Mode: Disabled" : "Encryption Mode: Enabled"); setEncrypt(!encrypt)}}>
                 <LockClosedIcon className="size-6 text-white opacity-40 hover:opacity-100" />
             </motion.li>
 

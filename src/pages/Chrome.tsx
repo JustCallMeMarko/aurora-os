@@ -2,6 +2,7 @@ import { ShieldExclamationIcon } from "@heroicons/react/24/solid";
 import Home from "./Home";
 import { Link } from "react-router-dom";
 import { XMarkIcon } from "@heroicons/react/24/solid";
+import { motion } from "motion/react";
 
 function Chrome() {
   return (
@@ -24,9 +25,17 @@ function Chrome() {
           AuroraOS has detected a potential virus inside Chrome.exe. Please take
           action immediately.
         </p>
-        <button className="ml-4 px-4 py-2 bg-red-600 text-white rounded-md font-semibold hover:bg-red-700 transition-colors duration-200 shadow-md">
+        <motion.button
+        initial={{ y: 0, scale: 1 }}
+          whileHover={{ y: -5, scale: 1.05 }}
+          transition={{
+            duration: 0.2,
+            type: "spring",
+            stiffness: 400,
+            damping: 15,
+          }} className="ml-4 px-4 py-2 cursor-pointer bg-red-600 text-white rounded-md font-semibold hover:bg-red-700 transition-colors duration-200 shadow-md">
           Uninstall and clean Chrome.exe
-        </button>
+        </motion.button>
       </div>
     </>
   );

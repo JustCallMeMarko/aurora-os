@@ -31,7 +31,7 @@ export default function Toast(props: ToastProps) {
                     transition={{ duration: 0.3, delay: 0.5 }}
                     className="mx-auto mt-8 py-3 bg-black backdrop-blur-sm  h-fit z-55 rounded-full px-8 flex items-center justify-center"
                 >
-                    <CheckIcon className="w-6 h-6 text-white mr-2" />
+                    
                     <span className="text-white font-semibold text-sm">{props.message}</span>
                 </motion.div>
                 </div>
