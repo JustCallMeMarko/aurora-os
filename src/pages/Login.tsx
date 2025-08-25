@@ -45,10 +45,11 @@ function Login() {
           name="password"
           value={password}
           placeholder="Enter password"
+          autoComplete="off"
           className="bg-white/70 rounded-full px-3 py-1 w-[180px] md:w-[200px] text-sm md:text-md text-white/80 placeholder:text-black/30"
           onKeyDown={(e) => {
             if (e.key === "Enter") {
-              if (e.currentTarget.value === "marksakalam") {
+              if (e.currentTarget.value === "mark") {
                 window.location.href = "/home";
               } else {
                 setPassword("");

@@ -34,7 +34,7 @@ function Layout() {
           <img src={WifiBatt} alt="Wifi and Battery" className=" h-3" />
           <span className="text-white font-bold text-xs">{timeFormat}</span>
         </div>
-        <div className="w-screen h-screen">
+        <div className="w-screen h-screen flex">
             <Outlet />
         </div>
         <Taskbar setMess={setMsg} setToast={setShowToast} />
