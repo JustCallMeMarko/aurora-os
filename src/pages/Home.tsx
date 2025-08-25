@@ -1,4 +1,4 @@
-import Pomodoro from "../components/pomodoro";
+import Pomodoro from "../components/Pomodoro";
 import { useOutletContext } from "react-router-dom";
 import Encrypt from "../components/Encrypt";
 function Home() {
