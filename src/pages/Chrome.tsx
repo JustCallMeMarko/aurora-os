@@ -20,7 +20,7 @@ function Chrome() {
             Virus Detected
           </h1>
         </div>
-        <p className="text-white/70">
+        <p className="text-white/70 w-[50%] text-center">
           AuroraOS has detected a potential virus inside Chrome.exe. Please take
           action immediately.
         </p>
