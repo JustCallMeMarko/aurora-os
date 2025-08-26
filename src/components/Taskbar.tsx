@@ -6,7 +6,7 @@ import Spotify from "../assets/Spotify.png";
 import google from "../assets/google.png";
 import { useNavigate } from "react-router-dom";
 import { BoltIcon, LockClosedIcon, MagnifyingGlassCircleIcon } from "@heroicons/react/16/solid";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 function Taskbar({
   setToast,
   setMess,
@@ -33,6 +33,11 @@ function Taskbar({
             navigate(`/${name}`);
         }
     }
+    useEffect(() => {
+        if (window.location.pathname === "/home") {
+            setSelected("");
+        }
+    }, [window.location.pathname]);
   return (
     <div className="fixed backdrop-blur-sm z-50 bottom-4 bg-stone-700/50 border-1 w-fit gap-2 md:gap-16 border-white/30 rounded-full flex px-2 py-2">
         <ul className="flex gap-2 items-center">

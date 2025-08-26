@@ -3,6 +3,8 @@ import AthenaColored from "../assets/AthenaColored.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Home from "./Home";
+import { motion } from "motion/react";
+import LazyImage from "../components/LazyImage";
 interface myMsg {
   user: "bot" | "user";
   message: string;
@@ -26,7 +28,15 @@ function Chatbot() {
   return (
     <>
     <Home/>
-      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-y-hidden w-[90%] md:w-[46%] max-h-[540px] h-[80%] md:h-[90%] bg-black/40 border-1 p-4 border-white/30 rounded-xl mx-auto backdrop-blur-md ">
+      <motion.div
+      initial={{ y: 20, opacity: 0, scale: 0.8 }}
+      animate={{ y: 0, opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.2,
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+      }} className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-y-hidden w-[90%] md:w-[46%] max-h-[540px] h-[80%] md:h-[90%] bg-black/40 border-1 p-4 border-white/30 rounded-xl mx-auto backdrop-blur-md ">
         <Link
           to="/home"
           className="absolute top-4 right-4 bg-stone-700/50 border-1 border-white/30 rounded-md p-1 hover:scale-110 transition-transform duration-200"
@@ -34,10 +44,11 @@ function Chatbot() {
           <XMarkIcon className="h-6 w-6 text-white cursor-pointer" />
         </Link>
         <div className="flex items-center gap-4">
-          <img
+          <LazyImage
             src={AthenaColored}
             alt="Athena Colored"
-            className="w-[25px] md:w-[54px] h-[25px] md:h-[74px]"
+            image="w-[25px] md:w-[54px] h-[25px] md:h-[74px]"
+            holder="w-[25px] md:w-[54px] h-[25px] md:h-[74px]"
           />
           <p className="text-white font-bold italic text-lg md:text-3xl">
             Athena AI
@@ -104,7 +115,7 @@ function Chatbot() {
             </button>
           </form>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

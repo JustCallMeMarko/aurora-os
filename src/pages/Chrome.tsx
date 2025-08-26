@@ -8,7 +8,17 @@ function Chrome() {
   return (
     <>
       <Home />
-      <div className="absolute left-1/2 top-1/2 flex justify-center items-center gap-4  flex-col transform -translate-x-1/2 -translate-y-1/2 overflow-y-hidden w-[90%] md:w-[46%] max-h-[540px] h-[80%] md:h-[90%] bg-black/40 border-1 p-4 border-white/30 rounded-xl mx-auto backdrop-blur-md ">
+      <motion.div
+        initial={{ y: 20, opacity: 0, scale: 0.8 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.2,
+          type: "spring",
+          stiffness: 400,
+          damping: 30,
+        }}
+        className="absolute left-1/2 top-1/2 flex justify-center items-center gap-4  flex-col transform -translate-x-1/2 -translate-y-1/2 overflow-y-hidden w-[90%] md:w-[46%] max-h-[540px] h-[80%] md:h-[90%] bg-black/40 border-1 p-4 border-white/30 rounded-xl mx-auto backdrop-blur-md "
+      >
         <Link
           to="/home"
           className="absolute top-4 right-4 bg-stone-700/50 border-1 border-white/30 rounded-md p-1 hover:scale-110 transition-transform duration-200"
@@ -26,17 +36,19 @@ function Chrome() {
           action immediately.
         </p>
         <motion.button
-        initial={{ y: 0, scale: 1 }}
+          initial={{ y: 0, scale: 1 }}
           whileHover={{ y: -5, scale: 1.05 }}
           transition={{
             duration: 0.2,
             type: "spring",
             stiffness: 400,
             damping: 15,
-          }} className="ml-4 px-4 py-2 cursor-pointer bg-red-600 text-white rounded-md font-semibold hover:bg-red-700 transition-colors duration-200 shadow-md">
+          }}
+          className="ml-4 px-4 py-2 cursor-pointer bg-red-600 text-white rounded-md font-semibold hover:bg-red-700 transition-colors duration-200 shadow-md"
+        >
           Uninstall and clean Chrome.exe
         </motion.button>
-      </div>
+      </motion.div>
     </>
   );
 }
