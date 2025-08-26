@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import loading from "../assets/loading.mp4";
 
 function Loading() {
   const navigate = useNavigate();
@@ -10,12 +9,11 @@ function Loading() {
       onClick={() => navigate("/login")}
     >
       <video
-        src={loading}
+        src="/loading.mp4"
         autoPlay
         muted
         playsInline
         preload="auto"
-        poster="/Loading.mp4"
         className="block object-cover w-full md:w-[40%] h-[40%]"
         onClick={() => navigate("/login")}
       />
