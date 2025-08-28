@@ -8,14 +8,13 @@ import VR from "./pages/VR";
 import Aurora from "./pages/Aurora";
 import Chrome from "./pages/Chrome";
 import Loading from "./pages/Loading";
+import Info from "./pages/Info";
 import { useEffect, useState } from "react";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // If the page is already fully loaded (e.g., fast reload),
-    // set loading to false immediately.
     if (document.readyState === "complete") {
       setLoading(false);
       return;
@@ -28,7 +27,6 @@ function App() {
     return () => window.removeEventListener("load", handleLoad);
   }, []);
 
-  // Splash screen before router
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen bg-black text-white text-2xl">
@@ -45,6 +43,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route element={<Layout />}>
           <Route path="/home" element={<Home />} />
+          <Route path="/info" element={<Info />} />
           <Route path="/chrome" element={<Chrome />} />
           <Route path="/aurora" element={<Aurora />} />
           <Route path="/ai" element={<Chatbot />} />

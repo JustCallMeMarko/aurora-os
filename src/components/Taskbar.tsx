@@ -47,7 +47,7 @@ function Taskbar({
             transition={{type: "spring", stiffness: 400, damping: 15, duration: 0.2}}
             className="cursor-pointer"
             onClick={() => handleOpen("aurora")}>
-                <img src={aurora} alt="some image" className={`h-8 w-8  hover:opacity-100 ${selected === "aurora" ? "opacity-100" : "opacity-40"}`} />
+                <img src={aurora} alt="some image" className={`h-7 w-10  hover:opacity-100 ${selected === "aurora" ? "opacity-100" : "opacity-40"}`} />
             </motion.li>
             <motion.li
             initial={{ y: 0 }}
@@ -55,7 +55,7 @@ function Taskbar({
             transition={{type: "spring", stiffness: 400, damping: 15, duration: 0.2}}
             className="cursor-pointer"
             onClick={() => handleOpen("ai")}>
-                <img src={Athena} alt="some image" className={`h-8 w-7  hover:opacity-100 ${selected === "ai" ? "opacity-100" : "opacity-40"} mt-1.5`} />
+                <img src={Athena} alt="some image" className={`h-8 w-8 -ml-1 hover:opacity-100 ${selected === "ai" ? "opacity-100" : "opacity-40"} mt-1.5`} />
             </motion.li>
             <motion.li
             initial={{ y: 0 }}

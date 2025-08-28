@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import backgroundLogin from "../assets/backgroundLogin.png";
 import WifiBatt from "../assets/WifiBatt.png";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import Taskbar from "../components/Taskbar";
 import Toast from "../components/Toast";
+import { InformationCircleIcon } from "@heroicons/react/24/outline";
 
 function Layout() {
+  const navigate = useNavigate();
   const [timeFormat, setTimeFormat] = useState("");
   const [showToast, setShowToast] = useState(false);
   const [msg, setMsg] = useState("");
@@ -33,6 +35,7 @@ function Layout() {
         backgroundPosition: "center",
       }}>
         <div className="flex items-center absolute top-3 right-3 gap-2">
+          <InformationCircleIcon className="size-4 text-white cursor-pointer" onClick={() => navigate("/info")} />
           <img src={WifiBatt} alt="Wifi and Battery" className=" h-3" />
           <span className="text-white font-bold text-xs">{timeFormat}</span>
         </div>
