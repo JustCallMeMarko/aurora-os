@@ -33,7 +33,7 @@ function Info() {
           <XMarkIcon className="h-6 w-6 text-white cursor-pointer" />
         </Link>
         <div className="flex w-[94%] h-[90%] my-auto">
-          <div className="w-[50%] flex flex-col gap-3 items-center ">
+          <div className="w-[50%] justify-center flex flex-col gap-3 items-center ">
             <img
               src="https://scontent.fmnl19-1.fna.fbcdn.net/v/t39.30808-1/531613973_24281861278142363_137333477327209063_n.jpg?stp=dst-jpg_s200x200_tt6&amp;_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=e99d92&amp;_nc_eui2=AeHVR4wZfGCSQp4RoilaunGVHfIqxh1YVaUd8irGHVhVpe9klf3gATFs32zPXz2aDiJhxi5p_i1r8oXnK12ZjZJy&amp;_nc_ohc=iDpHfwFM2IEQ7kNvwFHXPmT&amp;_nc_oc=AdkKVKF4qkaht0MJbShXGRnNoCagbsTyLSviq5s2JRZSJV2yHIjUZppogxa7db4ys28&amp;_nc_zt=24&amp;_nc_ht=scontent.fmnl19-1.fna&amp;_nc_gid=pXOkWqkBQe6sRJcSZMrSiA&amp;oh=00_AfVLr0dUGVfmr4GZgJZHSmYPig1dNoMVn6bbfueGmD_fYQ&amp;oe=68B609EC"
               className="rounded-full w-[60%]"
