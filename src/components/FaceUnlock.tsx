@@ -22,7 +22,7 @@ function FaceUnlock({
         transition={{ duration: 0.3 }}
         src={FaceID}
         alt="Face Unlock"
-        className="w-58"
+        className="w-78"
       />
     </motion.div>
   );
